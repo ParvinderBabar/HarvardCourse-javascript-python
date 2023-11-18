@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+    <script>
+       
+
+        function hello(){
+            console.log(hello);
+             alert('hello','world');  
+
+            
+        };
+        let num=0;
+        function count() {
+            num++;
+           
+        if(num%10===0)
+        { 
+            alert(`count is now ${num}` );
+        } 
+        document.querySelector('h1').innerHTML = num;
+    };
+          
+            document.addEventListener('DOMContentLoaded', function () {
+               
+                document.querySelector('button').onclick = count;
+            }
+            );
+
+        
+        
+     
+     </script>
+</head>
+<body>
+    <h1>0</h1>
+    <h2>Hello</h2>
+    <!-- <button id="helloButton" onclick='hello()'>click me</button> -->
+    <button id="clickButton">count me</button>
+    
+</body>
+</html>
