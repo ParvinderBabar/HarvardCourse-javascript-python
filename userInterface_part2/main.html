@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        // function handlePage(page) {
+        //         document.querySelectorAll('div').forEach(div => { div.style.display = 'none'; });
+        //         if (document.querySelector(`#${page}`) !== null) {
+        //             console.log("cbkjh");
+
+        //             document.querySelector(`#${page}`).style.display = 'block';
+
+        //         }
+        //     }
+
+        function showSection(section)
+                    {
+            const sectionContent = {
+                section1: '<p>Content for Section 1</p>',
+                section2: '<p>Content for Section 2</p>',
+                section3: '<p>Content for Section 3</p>',
+            };
+
+                    
+                            // console.log(text);
+            document.querySelector('#section-content').innerHTML = sectionContent[section];
+                          
+                        }
+                    
+                    
+                                document.addEventListener('DOMContentLoaded',function()
+                                {
+                                    document.querySelectorAll('button').forEach(button=>{
+                        button.onclick=function(){
+                            showSection(this.dataset.section);
+
+                                    }})
+                                }
+
+                        );
+    </script>
+</head>
+<body>
+    <button data-Section="section1">Section1</button>
+    <button data-Section="section2">Section2</button>
+    <button data-Section="section3">Section3</button>
+    
+    <div id="section-content"></div>
+    
+   
+</body>
+</html>

@@ -21,10 +21,17 @@
 
         }}
         
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = function () {
+                        showSection(this.dataset.page);
 
-       
-    
-</script>
+                    }
+                })
+            }
+
+            );
+        </script>
 </head>
 <body>
    
