@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        display:none;
+    }
+</style>
+<script>
+    handlePage("page1");
+        document.addEventListener('DOMContentLoaded', function () {
+            handlePage("page1");
+        });
+    function handlePage(page) {
+        console.log("cbkjh");
+         if (document.querySelector(`#${page}`) !== null) {
+                console.log("cbkjh");
+              
+            document.querySelector(`#${page}`).style.display = 'block';
+
+        }}
+        
+
+       
+    
+</script>
+</head>
+<body>
+   
+    <button data-page="page1">Page1</button>
+    <button data-page="page2">Page2</button>
+    <button data-page="page3">Page3</button>
+    <div id="page1">
+        <h1>THIS IS PAGE1</h1></div>
+    <div id="page2">THIS IS PAGE2</div>
+    <div id="page3">THIS IS PAGE3</div>
+    
+</body>
+</html>
