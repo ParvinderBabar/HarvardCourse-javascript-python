@@ -10,12 +10,10 @@
     }
 </style>
 <script>
-    handlePage("page1");
-        document.addEventListener('DOMContentLoaded', function () {
-            handlePage("page1");
-        });
+    
     function handlePage(page) {
-        console.log("cbkjh");
+        document.querySelectorAll('div').forEach(div => 
+            {div.style.display='none';});
          if (document.querySelector(`#${page}`) !== null) {
                 console.log("cbkjh");
               
